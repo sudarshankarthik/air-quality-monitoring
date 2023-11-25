@@ -1,0 +1,235 @@
+{
+    "meta": [
+        {
+            "name": "data_stream_name",
+            "type": "String"
+        },
+        {
+            "name": "ts",
+            "type": "UInt32"
+        },
+        {
+            "name": "value",
+            "type": "Float64"
+        }
+    ],
+    "data": [
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244740,
+            "value": 33.8
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244680,
+            "value": 33.80000000000011
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244620,
+            "value": 33.9102272727274
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244560,
+            "value": 34.32090395480215
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244500,
+            "value": 35.01714285714275
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244440,
+            "value": 35.16114285714295
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244380,
+            "value": 33.66704545454553
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244320,
+            "value": 33.345833333333395
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244260,
+            "value": 33.150000000000084
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244200,
+            "value": 33.300000000000004
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244140,
+            "value": 33.3000000000001
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244080,
+            "value": 33.29999999999999
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698244020,
+            "value": 33.30000000000009
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243960,
+            "value": 33.30000000000011
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243900,
+            "value": 33.30000000000012
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243840,
+            "value": 33.18500000000012
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243780,
+            "value": 33.14246575342466
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243720,
+            "value": 33.30000000000011
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243660,
+            "value": 33.30000000000012
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243600,
+            "value": 33.30000000000012
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243540,
+            "value": 33.30000000000012
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243480,
+            "value": 33.03545454545465
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243420,
+            "value": 32.800000000000075
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243360,
+            "value": 32.800000000000004
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243300,
+            "value": 33.300000000000004
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698243240,
+            "value": 33.30000000000009
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242940,
+            "value": 33.800000000000026
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242880,
+            "value": 33.80000000000008
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242820,
+            "value": 33.800000000000125
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242760,
+            "value": 33.44727272727285
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242700,
+            "value": 33.232727272727395
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242640,
+            "value": 32.80000000000012
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242580,
+            "value": 32.8000000000001
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242520,
+            "value": 32.80000000000012
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242460,
+            "value": 32.80000000000012
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242400,
+            "value": 32.80000000000012
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242340,
+            "value": 32.800000000000104
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242280,
+            "value": 33.06528925619842
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242220,
+            "value": 27.018181818181905
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242160,
+            "value": 1
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242100,
+            "value": 1
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698242040,
+            "value": 1
+        },
+        {
+            "data_stream_name": "Temparature",
+            "ts": 1698241980,
+            "value": 1
+        }
+    ],
+    "rows": 43,
+    "rows_before_limit_at_least": 43
+}

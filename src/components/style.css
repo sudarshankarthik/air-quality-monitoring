@@ -1,0 +1,125 @@
+.navbar {
+    height: 75px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: darkslategray;
+    position: absolute;
+    top: 0;
+}
+
+.logo {
+    text-align: center;
+    color: white;
+}
+
+.footer {
+    /* position: absolute;
+    bottom: 0; */
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
+    background-color: black;
+    flex-direction: column;
+}
+
+.footer-text {
+    text-align: center;
+    color: white;
+}
+
+.dashbord {
+    display: flex;
+    padding: 50px 50px;
+    background-color: aliceblue;
+    justify-content: space-evenly;
+    margin-top: 75px;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tmp-card {
+    background: linear-gradient(to bottom right, #e74c3c, #f39c12);
+}
+
+.hum-card {
+    background: linear-gradient(to bottom right, #3c72e7, #12f3d5);
+}
+
+.air-card {
+    background: linear-gradient(to bottom right, #69e213, #29d775);
+}
+
+@media only screen and (max-width: 600px) {
+    .dashbord {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 250px;
+        height: 100px;
+        border-radius: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+
+.card-content {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2f4f4f;
+    color: white;
+  }
