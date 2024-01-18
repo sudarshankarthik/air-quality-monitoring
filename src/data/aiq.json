@@ -1,0 +1,270 @@
+{
+    "meta": [
+        {
+            "name": "data_stream_name",
+            "type": "String"
+        },
+        {
+            "name": "ts",
+            "type": "UInt32"
+        },
+        {
+            "name": "value",
+            "type": "Float64"
+        }
+    ],
+    "data": [
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698241980,
+            "value": 0
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242040,
+            "value": 310.02
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242100,
+            "value": 315.44
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242160,
+            "value": 324.75
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242220,
+            "value": 323.65
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242280,
+            "value": 324.97
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242340,
+            "value": 320.89
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242400,
+            "value": 312.88
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242460,
+            "value": 324.68
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242520,
+            "value": 324.6
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242580,
+            "value": 317.94
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242640,
+            "value": 319.56
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242700,
+            "value": 323.18
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242760,
+            "value": 317.16
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242820,
+            "value": 313.07
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242880,
+            "value": 323.22
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698242940,
+            "value": 324.95
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243000,
+            "value": 311.04
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243060,
+            "value": 324.87
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243120,
+            "value": 319.73
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243180,
+            "value": 321.97
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243240,
+            "value": 315.54
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243300,
+            "value": 319.46
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243360,
+            "value": 314.86
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243420,
+            "value": 312.17
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243480,
+            "value": 318.6
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243540,
+            "value": 320.46
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243600,
+            "value": 316.91
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243660,
+            "value": 313.4
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243720,
+            "value": 314.68
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243780,
+            "value": 310.85
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243840,
+            "value": 323.42
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243900,
+            "value": 313.32
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698243960,
+            "value": 317.09
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244020,
+            "value": 321.15
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244080,
+            "value": 319.79
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244140,
+            "value": 312.69
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244200,
+            "value": 311.48
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244260,
+            "value": 312.81
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244320,
+            "value": 312.49
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244380,
+            "value": 311.41
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244440,
+            "value": 324.75
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244500,
+            "value": 312.48
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244560,
+            "value": 310.26
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244620,
+            "value": 310.81
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244680,
+            "value": 322.07
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244740,
+            "value": 321.03
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244800,
+            "value": 316.94
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244860,
+            "value": 322.07
+        },
+        {
+            "data_stream_name": "AirQuality",
+            "ts": 1698244920,
+            "value": 321.65
+        }
+    ],
+    "rows": 50,
+    "rows_before_limit_at_least": 50
+}

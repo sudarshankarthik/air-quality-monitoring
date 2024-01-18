@@ -17,6 +17,7 @@ function App() {
         <Navbar />
         <Dashbord  onClick={handleButtonClick}/>
         <Table clickedButton={clickedButton}/>
+        
         <Footer />
     </div>
   );

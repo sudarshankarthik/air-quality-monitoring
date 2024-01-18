@@ -1,7 +1,9 @@
 import tempData from '../data/tmp.json'
 import humdData from '../data/hum.json'
+import aiqData from '../data/aiq.json'
 import './style.css'
 import { useEffect, useState } from 'react';
+import TemperatureChart from './TemperatureChart';
 
 
 const Table = ({ clickedButton }) => {
@@ -31,7 +33,10 @@ const Table = ({ clickedButton }) => {
     }
   
     if (!data || data.error) {
-        const d =  clickedButton === 1 ? tempData.data : humdData.data
+        var d =  clickedButton === 1 ? tempData.data : humdData.data
+        if (clickedButton === 3) {
+            d = aiqData.data
+        }
         var unit
         if (clickedButton === 1)
             unit = "C"
@@ -39,9 +44,6 @@ const Table = ({ clickedButton }) => {
             unit = "%"
         else 
             unit = "PPM"
-
-        console.log("data",d);
-
         
     
         const DisplayData = d.map(
@@ -62,7 +64,7 @@ const Table = ({ clickedButton }) => {
                 if (clickedButton === 1 || clickedButton === 2)
                     value = Number((row.value).toFixed(2))
                 else 
-                    value =  Number((row.value).toFixed(2)) + 250
+                    value =  Number((row.value).toFixed(2))
                 return(
                     <tr>
                         <td>{time}</td>
@@ -74,6 +76,7 @@ const Table = ({ clickedButton }) => {
     
         return(
             <div>
+                <TemperatureChart data={d} lable={clickedButton} />
                 <table class="table table-striped" id='customers'>
                     <thead>
                         <tr>
@@ -93,9 +96,8 @@ const Table = ({ clickedButton }) => {
         )
     }
 
-    const d = data.data
+    d = data.data
 
-    console.log("data",data);
     if (clickedButton === 1)
         unit = "C"
     else if (clickedButton === 2)
@@ -106,33 +108,34 @@ const Table = ({ clickedButton }) => {
     const DisplayData = d.map(
         (row)=>{
             const milliseconds = row.ts * 1000;
-
+            
             // Create a Date object
             const date = new Date(milliseconds);
-
+            
             // Extract hours, minutes, and seconds
             const hours = date.getHours();
             const minutes = date.getMinutes();
             const seconds = date.getSeconds();
-
+            
             const time = `${hours}:${minutes}:${seconds}`
             var value
             if (clickedButton === 1 || clickedButton === 2)
                 value = Number((row.value).toFixed(2))
             else 
-                value =  Number((row.value).toFixed(2)) 
-
-            return(
-                <tr>
+            value =  Number((row.value).toFixed(2)) 
+        
+        return(
+            <tr>
                     <td>{time}</td>
                     <td>{value} {unit}</td>
                 </tr>
             )
         }
-    )
+        )
 
     return(
         <div>
+            <TemperatureChart data={d} lable={clickedButton} />
             <table class="table table-striped" id='customers'>
                 <thead>
                     <tr>
