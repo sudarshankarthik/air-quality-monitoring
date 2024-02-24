@@ -5,35 +5,27 @@ import { Line } from 'react-chartjs-2';
 
 
 const TemperatureChart = ({ data,lable }) => {
-
-  const convertTimestampToTime = (timestamp) => {
-    const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-    return `${hours}:${minutes}:${seconds}`;
-  };
     var val = ""
     var col = ""
     if (lable === 1) {
-        val= "Temperature"
+        val= "temperature"
         col = "rgb(238, 119, 37)"
     }
     else if (lable === 2) {
-        val= "Humidity"
+        val= "humidity"
         col = "hsl(188, 73%, 50%)"
     }
     else if (lable === 3) {
-        val = "Air Quality"
+        val = "airQuality"
         col = "rgb(59, 219, 90)"
     }
 
   const chartData = {
-    labels: data.map((entry) => ((entry.ts))), // Convert seconds to milliseconds
+    labels: data.map((entry) => ((entry.timestamp.seconds))), // Convert seconds to milliseconds
     datasets: [
       {
         label: val,
-        data: data.map((entry) => entry.value),
+        data: data.map((entry) => entry[val]),
         fill: false,
         borderColor: col,
         tension: 0.1,

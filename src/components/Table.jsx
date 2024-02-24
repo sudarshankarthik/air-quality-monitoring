@@ -1,159 +1,90 @@
-import tempData from '../data/tmp.json'
-import humdData from '../data/hum.json'
-import aiqData from '../data/aiq.json'
+import React, { useState, useEffect } from 'react';
+import { collection, getDocs,getFirestore } from 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
+import { getApps } from 'firebase/app';
+import TimestampDisplay from './TimestampDisplay';
 import './style.css'
-import { useEffect, useState } from 'react';
 import TemperatureChart from './TemperatureChart';
 
+function Table({clickedButton}) {
+  const [snapshotData, setSnapshotData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-const Table = ({ clickedButton }) => {
+  const firebaseConfig = {
 
-    const [loading, setLoading] = useState(true);
-    const [data, setData] = useState(null)
+    apiKey: "AIzaSyC_G5iVbMULeqjrifKZ9ouAIEXEUBfOQSU",
   
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-            const api = "https://blynk.cloud/external/api/data/get?token=N1hzwYO_EEdQDxpMeFtnG-LO5RvCG6gy&period=DAY&granularityType=MINUTE&output=JSON&pin=v" + clickedButton
-          const response = await fetch("api");
-          const jsonData = await response.json();
-          setData(jsonData);
-          setLoading(false);
-        } catch (error) {
-          console.error('Error fetching data:', error);
-          setLoading(false);
-        }
-      };
+    authDomain: "aqm-iot-9254b.firebaseapp.com",
   
-      fetchData();
-    }, [clickedButton]); // The empty array ensures that this effect runs once, similar to componentDidMount
+    databaseURL: "https://aqm-iot-9254b-default-rtdb.asia-southeast1.firebasedatabase.app",
   
-    if (loading) {
-      return <div>Loading...</div>;
-    }
+    projectId: "aqm-iot-9254b",
   
-    if (!data || data.error) {
-        var d =  clickedButton === 1 ? tempData.data : humdData.data
-        if (clickedButton === 3) {
-            d = aiqData.data
-        }
-        var unit
-        if (clickedButton === 1)
-            unit = "C"
-        else if (clickedButton === 2)
-            unit = "%"
-        else 
-            unit = "PPM"
-        
-    
-        const DisplayData = d.map(
-            (row)=>{
+    storageBucket: "aqm-iot-9254b.appspot.com",
+  
+    messagingSenderId: "1048771851044",
+  
+    appId: "1:1048771851044:web:d05400c8a6107c0d5ff9b1",
+  
+    measurementId: "G-P1ME4EGQ2Q"
+  
+  };
+  
+  
+  const app = getApps().length > 0 ? getApps()[0] : initializeApp(firebaseConfig);
+  const firestore = getFirestore(app); 
 
-                const milliseconds = row.ts * 1000;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const snapshot = await getDocs(collection(firestore, 'iot-aiq'));
+        const data = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setSnapshotData(data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-                // Create a Date object
-                const date = new Date(milliseconds);
+    fetchData();
+  }, [firestore]);
+  
 
-                // Extract hours, minutes, and seconds
-                const hours = date.getHours();
-                const minutes = date.getMinutes();
-                const seconds = date.getSeconds();
-
-                const time = `${hours}:${minutes}:${seconds}`
-                var value
-                if (clickedButton === 1 || clickedButton === 2)
-                    value = Number((row.value).toFixed(2))
-                else 
-                    value =  Number((row.value).toFixed(2))
-                return(
-                    <tr>
-                        <td>{time}</td>
-                        <td>{value} {unit}</td>
-                    </tr>
-                )
-            }
-        )
-    
-        return(
-            <div>
-                <TemperatureChart data={d} lable={clickedButton} />
-                <table class="table table-striped" id='customers'>
-                    <thead>
-                        <tr>
-                        <th>Time Stamp</th>
-                        <th>Value</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                     
-                        
-                        {DisplayData}
-                        
-                    </tbody>
-                </table>
-                 
-            </div>
-        )
-    }
-
-    d = data.data
-
-    if (clickedButton === 1)
-        unit = "C"
-    else if (clickedButton === 2)
-        unit = "%"
-    else 
-        unit = "PPM"
-    
-    const DisplayData = d.map(
-        (row)=>{
-            const milliseconds = row.ts * 1000;
-            
-            // Create a Date object
-            const date = new Date(milliseconds);
-            
-            // Extract hours, minutes, and seconds
-            const hours = date.getHours();
-            const minutes = date.getMinutes();
-            const seconds = date.getSeconds();
-            
-            const time = `${hours}:${minutes}:${seconds}`
-            var value
-            if (clickedButton === 1 || clickedButton === 2)
-                value = Number((row.value).toFixed(2))
-            else 
-            value =  Number((row.value).toFixed(2)) 
-        
-        return(
+  return (
+    <div>
+        <TemperatureChart data={snapshotData} lable={clickedButton} />
+      {isLoading && <p>Loading data...</p>}
+      {error && <p>Error fetching data: {error.message}</p>}
+      {snapshotData.length > 0 && (
+        <table id='customers'>
+          <thead>
             <tr>
-                    <td>{time}</td>
-                    <td>{value} {unit}</td>
-                </tr>
-            )
-        }
-        )
-
-    return(
-        <div>
-            <TemperatureChart data={d} lable={clickedButton} />
-            <table class="table table-striped" id='customers'>
-                <thead>
-                    <tr>
-                    <th>Time Stamp</th>
-                    <th>Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                 
-                    
-                    {DisplayData}
-                    
-                </tbody>
-            </table>
-             
-        </div>
-    )
-
+              <th>Timestamp</th>
+              <th>Temperature</th>
+              <th>Humidity</th>
+              <th>Air Quality</th>
+            </tr>
+          </thead>
+          <tbody>
+            {snapshotData.map((data) => (
+              <tr key={data.id}>
+               <td> <TimestampDisplay timestamp={data.timestamp} /> </td>
+                <td>{data.temperature}</td>
+                <td>{data.humidity}</td>
+                <td>{data.airQuality}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+      {snapshotData.length === 0 && <p>No data available.</p>}
+    </div>
+  );
 }
 
-export default Table
+export default Table;
